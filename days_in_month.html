@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Num of days in month</title>
+</head>
+
+<body>
+	<script>
+		var year = prompt("Enter the year");
+		var month = prompt("Enter the month number\n1-January\n2-February\n3-March\n4-April\n5-May\n6-June\n7-July\n8-August\n9-September\n10-October\n11-November\n12-December");
+		month = Number.parseInt(month);
+		switch (month) {
+			case 1: document.write(31);
+				break;
+			case 2: if ((year % 100 != 0 && year % 4 == 0) || year % 400 == 0) {
+				document.write(29);
+			}
+			else
+				document.write(28);
+				break;
+			case 3: document.write(31);
+				break;
+			case 4: document.write(30);
+				break;
+			case 5: document.write(31);
+				break;
+			case 6: document.write(30);
+				break;
+			case 7: document.write(31);
+				break;
+			case 8: document.write(31);
+				break;
+			case 9: document.write(30);
+				break;
+			case 10: document.write(31);
+				break;
+			case 11: document.write(30);
+				break;
+			case 12: document.write(31);
+				break;
+			default: document.write("Please choose a valid month number");
+				break;
+
+		}
+	</script>
+</body>
+
+</html>

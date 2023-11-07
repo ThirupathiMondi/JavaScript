@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ascending of 3 nums</title>
+</head>
+
+<body>
+	<script>
+		var a = prompt("Enter 1st number");
+		var b = prompt("Enter 1st number");
+		var c = prompt("Enter 1st number");
+		if (a < b && a < c) {
+			document.write(`${a}`);
+			if (b < c) {
+				document.write(`${b} ${c}`);
+			}
+			else {
+				document.write(`${c} ${b}`);
+			}
+		}
+		else if (b < c && b < a) {
+			document.write(`${b} `);
+			if (c < a) {
+				document.write(`${c} ${a}`);
+			}
+			else {
+				document.write(`${a} ${c}`);
+			}
+		}
+		else {
+			document.write(`${c} `);
+			if (a > b) {
+				document.write(`${b} ${a}`);
+			}
+			else
+				document.write(`${a} ${b}`);
+		}
+
+	</script>
+</body>
+
+</html>

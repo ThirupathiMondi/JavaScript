@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Type of Triangle</title>
+</head>
+
+<body>
+	<script>
+		var a = prompt("Enter 1st side of triangle");
+		var b = prompt("Enter 2nd side of triangle");
+		var c = prompt("Enter 3rd side of triangle");
+
+		if (a == b && b == c) {
+			document.write("Equilateral Triangle");
+		}
+		else if (a == b || b == c || a == c) {
+			document.write("Isosceles Triangle");
+		}
+		else {
+			document.write("Scalene Triangle");
+		}
+	</script>
+</body>
+
+</html>
