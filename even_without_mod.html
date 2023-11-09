@@ -13,7 +13,14 @@
         if ((n & 1) == 0)
             document.write("Even");
         else
-            document.write("Odd")
+            document.write("Odd");
+
+
+        // Another way
+        if (parseInt(n / 2) * 2 == n)
+            document.write(`<br> Even`);
+        else
+            document.write(` <br> Odd`)
     </script>
 </body>
 
