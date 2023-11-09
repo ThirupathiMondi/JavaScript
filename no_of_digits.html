@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Num of Digits</title>
+</head>
+
+<body>
+    <script>
+
+        var a = parseInt(prompt());
+        var count = 0;
+        while (a != 0) {
+            count++;
+            a = parseInt(a / 10);
+        }
+        document.write(count);
+    </script>
+</body>
+
+</html>

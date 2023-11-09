@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = parseInt(prompt());
+        if (a == 2) {
+            document.write("Prime ");
+        }
+        else {
+            for (var i = 2; i <= parseInt(a / 2); i++) {
+                if (a % i == 0)
+                    break;
+            }
+            if (a % i == 0)
+                document.write("Not Prime");
+            else
+                document.write("Prime Number");
+        }
+    </script>
+</body>
+
+</html>
