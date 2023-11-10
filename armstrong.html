@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong number</title>
+</head>
+
+<body>
+    <script>
+
+        // Armstrong number - A number where the powers of each digit with the number of digits in it sums up to its original number
+        var num = parseInt(prompt("Enter a number"));
+        var dup = num;
+        var count = 0;
+        var sum = 0;
+
+        while (num != 0) {
+            count++;
+            num = parseInt(num / 10);
+        }
+        num = dup;
+        while (dup != 0) {
+            sum = sum + (dup % 10) ** count;
+            dup = parseInt(dup / 10);
+        }
+        num == sum ? document.write(`Armstrong number ${num} - ${sum} <br>`) : document.write();
+
+
+        //All Armstrong numbers between 1 to 10000  
+        // for (var i = 1; i < 10000; i++) {
+        //     var num = i;
+        //     var dup = num;
+        //     var count = 0;
+        //     var sum = 0;
+
+        //     while (num != 0) {
+        //         count++;
+        //         num = parseInt(num / 10);
+        //     }
+        //     num = dup;
+        //     while (dup != 0) {
+        //         sum = sum + (dup % 10) ** count;
+        //         dup = parseInt(dup / 10);
+        //     }
+        //     num == sum ? document.write(`Armstrong number ${num} - ${sum} <br>`) : document.write();
+        // }
+    </script>
+</body>
+
+</html>

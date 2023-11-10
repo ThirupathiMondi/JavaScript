@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strong number</title>
+</head>
+
+<body>
+    <script>
+
+        // Strong number - A number where the sum of factorial of each digit in the number sums up to the original number;
+        var num = parseInt(prompt());
+        var sum = 0;
+        var dup = num;
+        while (num > 0) {
+            var n = num % 10;
+            let cur_sum = 1;
+            while (n >= 1) {
+                cur_sum = cur_sum * n;
+                n--;
+                console.log(cur_sum);
+            }
+            sum = sum + cur_sum;
+            num = parseInt(num / 10);
+        }
+        dup == sum ? document.write(`Strong number ${sum}`) : document.write("Not a strong number");
+
+
+        //Strong numbers between 1 to 1000
+        // for (var i = 1; i <= 1000; i++) {
+
+        //     var num = parseInt(i);
+        //     var sum = 0;
+        //     var dup = num;
+        //     while (num > 0) {
+        //         var n = num % 10;
+        //         let cur_sum = 1;
+        //         while (n >= 1) {
+        //             cur_sum = cur_sum * n;
+        //             n--;
+        //         }
+        //         sum = sum + cur_sum;
+        //         num = parseInt(num / 10);
+        //         console.log(sum);
+        //     }
+        //     dup == sum ? document.write(`${sum} Strong number <br>`) : document.write();
+        // }
+
+    </script>
+</body>
+
+</html>
