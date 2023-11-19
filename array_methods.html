@@ -40,6 +40,16 @@
         document.write(`<br> ${a.sort((a, b) => a - b)}`);
         document.write(`<br> ${a.sort((a, b) => b - a)}`);
 
+        // Splice() - Method to delete and add elements from specified index.
+        // array.splice(1,2,3)
+        // 1- position where we want to perform actions
+        // 2 - numbers of elements to delete
+        // 3 - elements to be added
+        a.splice(0, 1, "hi", "hello", 0, 1, 2, 3, 4, 5, 6);
+        document.write(`<br> "0, 1, hi, hello, 0, 1, 2, 3, 4, 5, 6" -> at 0 index we deleted 1 element and added remaining elements at the same index <br> ${a}`);
+        // Delete 5 elements at index 0
+        a.splice(0, 5);
+        document.write(`<br> ${a}`)
 
     </script>
 </body>
