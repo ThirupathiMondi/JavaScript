@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+
+<body>
+    <script>
+        let a = [1, 34, 56, 76, 34, 756, 234, 567, 32, 67, 23, 56, 34, 5];
+
+        //Push() - Adds element at the end
+        document.write(`Before Push  : ${a} <br>`);
+        a.push(23);
+        document.write(`After Pushing 23 : ${a} <br>`);
+
+        //pop() - Deletes element from end
+        a.pop();
+        document.write(`After pop : ${a} <br>`);
+
+        //shift() - Deletes element from the beginning
+        a.shift();
+        document.write(`After shift : ${a} <br>`);
+
+        // unshift() - Adds element at the beginning
+        a.unshift(0);
+        document.write(`After unshift '0' : ${a} <br>`);
+
+        // reverse() - To print the array elements in reverse order
+        document.write(a.reverse());
+        // document.write("<br>" + a);
+
+    </script>
+</body>
+
+</html>
