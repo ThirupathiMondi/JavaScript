@@ -28,9 +28,18 @@
         a.unshift(0);
         document.write(`After unshift '0' : ${a} <br>`);
 
-        // reverse() - To print the array elements in reverse order
+        // reverse() - To reverse the array elements
         document.write(a.reverse());
-        // document.write("<br>" + a);
+
+        // sort() - Sorts the elements either in ascending or descending order
+        document.write(" <br> a.sort() ");
+        document.write(`<br> ${a.sort()}`);
+        document.write(
+            " <br> This method sorts the elements in dictionary order.. <br> To solve this issue we should use <br> For ascending order -> a,b => a-b <br> For descending order (a,b)=>b-a"
+        );
+        document.write(`<br> ${a.sort((a, b) => a - b)}`);
+        document.write(`<br> ${a.sort((a, b) => b - a)}`);
+
 
     </script>
 </body>
