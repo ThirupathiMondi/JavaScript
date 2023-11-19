@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 1) Array Literal
+        var a = [10, 29, 40, 'hi', "Hello", 4.5];
+        document.write(a);
+        document.write(`<br> ${a}`);
+
+        //Iterating array elements
+        // Traditional for loop
+        for (let i = 0; i < a.length; i++) {
+            document.write(` ${a[i]} <br>`);
+        }
+
+        // For of loop iterates through elements of array  directly
+        for (let i of a)
+            document.write(`<br> ${i}`);
+
+        // For in loop iterates through indexes of array
+        for (let i in a)
+            document.write(`<br> ${a[i]}`);
+
+        //For Each method to iterate through array
+        a.forEach(item => document.write(` <br> ${item}`));
+
+        // 2) Array Object
+        var arr = new Array();
+        arr[0] = 'hi';
+        arr[1] = 12;
+        arr[2] = 123;
+
+        document.write(` <br> ${arr} `);
+
+    </script>
+</body>
+
+</html>

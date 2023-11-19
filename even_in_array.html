@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = [1, 2, 434, 45, 234, 456, 2, 35, 56, 23, 655, 23, 345, 567, 232, 8, 34];
+        document.write("Using For Of loop <br>");
+        for (let i of a) {
+            if ((i & 1) == 0)
+                document.write(`Even : ${i}<br>`);
+        }
+
+        document.write(" <br> Using For in loop <br> ");
+        for (let i in a) {
+            if (a[i] % 2 == 0)
+                document.write(` Even : ${a[i]} <br>`);
+        }
+
+        document.write(" <br> Using ForEach Method <br> ");
+        a.forEach(item => (item & 1) == 0 ? document.write(` Even : ${item}<br>`) : document.write())
+    </script>
+</body>
+
+</html>

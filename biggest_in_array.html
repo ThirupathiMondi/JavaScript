@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = [1, 2, 4, 55, 66, 77, 322, 111, 444, 2234, 343, 2342, 454, 12, 456, 67, 2376, 4234, 457];
+        let max = a[0];
+        for (let i of a) {
+            if (i > max)
+                max = i;
+
+        }
+        document.write(`Array Elememts are : ${a} <br>`);
+        document.write(`Largest Element is : ${max}`);
+    </script>
+</body>
+
+</html>

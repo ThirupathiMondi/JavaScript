@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort</title>
+</head>
+
+<body>
+    <script>
+        var a = [9, 4, 22, 11, 55, 12, 54, 25, 4, 12, 54, 25, 747, 142, 474, 23, 457];
+        document.write(`Elements before sorting : ${a} <br> `);
+        for (let i = 0; i < a.length; i++) {
+            for (let j = i + 1; j < a.length - i; j++) {
+                if (a[i] > a[j]) {
+                    let temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+
+                }
+            }
+        }
+
+        document.write(`Elements After sorting : ${a} <br> `);
+
+    </script>
+</body>
+
+</html>
