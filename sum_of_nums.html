@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function add (...a) {
+            let sum = 0;
+            for (let i of a)
+                sum += i;
+
+            return sum;
+        }
+        let s = add(1, 2, 3, 4, 5, 5, 6, 6, 665, 5, 323, 2342, 343, 34);
+        document.write(s);
+        let t = add(1, 23, 2342, 343, 34);
+        document.write(`<br> ${t}`);
+        let u = add(1, 2, 3, 4, 5, 34);
+        document.write(`<br> ${u}`);
+
+        let addition = (...a) => {
+            let sum = 0;
+            for (let i of a)
+                sum += i;
+            return sum;
+        };
+        document.write(`<br> ${addition(23, 35, 67, 23, 234, 345)} `);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = prompt("Enter a string");
+        document.write(` ${str.split("")}`);
+        if (str.split("").reverse().join("") == str)
+            document.write(`<br>Palindrome`);
+        else
+            document.write(`<br>Not palindrome`);
+    </script>
+</body>
+
+</html>

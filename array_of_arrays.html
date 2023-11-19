@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = ["IronMan", "Hulk", "Captain America", "Thor"];
+        let b = ["Superman", "Batman", "Flash"];
+        let c = [a, b];
+        document.write(c);
+
+        c = [...a, ...b]; // Destructure arrays into c to sort them in array c
+        document.write(` <br> ${c.sort()}`);
+    </script>
+</body>
+
+</html>

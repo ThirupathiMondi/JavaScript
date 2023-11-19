@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+    <script>
+        // Traditional functions
+        function fun () {
+            document.write("Welcome to functions");
+        }
+        fun();
+
+        // Arrow functions - ES6 version
+        var a = () => document.write(" <br> Arrow functions");
+        a();
+
+        // function with parameters
+        function fun1 (a, b) {
+            document.write("<br> " + (a + b));
+        }
+        fun1(5, 10);
+
+        // Function with parameters and return type
+        function fun2 (a, b) {
+            return a + b;
+        }
+        document.write(`<br> ${fun2(5, 36)}`);
+        let add = fun2(10, 40);
+        document.writeln("<br>" + add)
+    </script>
+</body>
+
+</html>
