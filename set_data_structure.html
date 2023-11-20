@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let s = new Set();
+        s.add(5);
+        s.add(10).add(12).add(23).add(10);
+        document.write("Elements in the set are : <br>");
+        for (let i of s)
+            document.write(`${i} <br>`);
+        document.write(`<br> Set has 10 ? ${s.has(10)}`);
+        document.write(`<br> Set size ? ${s.size}`);
+        document.write(`<br> Delete 10 from set ? ${s.delete(10)}`);
+        document.write(" <br> Elements in the set are : <br>");
+        for (let i of s)
+            document.write(`${i} <br>`);
+    </script>
+</body>
+
+</html>

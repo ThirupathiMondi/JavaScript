@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+    }
+
+    #timer {
+        position: absolute;
+        top: 40%;
+        color: green;
+        border: 2px solid green;
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 40px;
+    }
+</style>
+
+<body>
+    <h3 id="timer"></h3>
+    <script>
+        setInterval(() => {
+            let d = new Date();
+            document.getElementById('timer').innerHTML = d.toLocaleTimeString();
+        }, 1000);
+    </script>
+</body>
+
+</html>
