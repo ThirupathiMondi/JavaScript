@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function User (id, name, email, mobile) {
+            this.id = id;
+            this.name = name;
+            this.email = email;
+            this.mobile = mobile;
+        }
+        var user1 = new User(1, "Thirupathi", "tiru", 123);
+        var user2 = new User(2, "Mondi", "tiru@gmail.com", 456);
+        var user3 = new User(3, "Pathi", "tiru@gmail.com", 789);
+
+        document.write(`${JSON.stringify(user1)} <br>`);
+        document.write(`${JSON.stringify(user2)} <br>`);
+        document.write(`${JSON.stringify(user3)} <br>`);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Movie (name, budget, target, ticketPrice) {
+            this.name = name;
+            this.budget = budget;
+            this.target = target;
+            this.ticketPrice = ticketPrice;
+        }
+        let m1 = new Movie("Ironman", 250, 1000, 120);
+        let m2 = new Movie("Hulk", 120, 900, 80);
+        let m3 = new Movie("Captain America", 50, 600, 70);
+        let m4 = new Movie("Spiderman", 300, 1100, 200);
+        let array = [m1, m2, m3, m4];
+        // document.write(`${JSON.stringify(array)}`);
+
+        for (let i of array) {
+            // Movie name : ticketPrice
+            // if( i.ticketPrice < 100)
+            //     document.write(`${i.name} : ${i.ticketPrice}<br>`);
+
+            // If ticketPrice < 100 -> Printing all the details of the movie in the form of Object
+            // if (i.ticketPrice < 100)
+            //     document.write(`${JSON.stringify(i)} <br>`);
+
+            // If ticketPrice < 120 -> Printing all the details of the movie in new lines
+            if (i.ticketPrice < 120) {
+                for (let j in i) {
+                    document.write(`${j} : ${i[j]} <br>`);
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
