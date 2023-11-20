@@ -6,8 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .brands {
+        padding: 10px;
+        border: 1px solid black;
+        width: 200px;
+        border-radius: 5px;
+        background-color: rgba(80, 104, 224, 0.699);
+        color: white;
+        box-shadow: 1px 1px 10px black;
+        text-align: center;
+    }
+
+    .brands:hover {
+        transform: scale(1.05, 1.05);
+        transition: 0.2s;
+    }
+</style>
 
 <body>
+    <div class="container">
+    </div>
     <script>
         function Mobile (brand, price, ram, storage) {
             this.brand = brand;
@@ -20,15 +50,22 @@
         let m2 = new Mobile("Redmi", 7000, "3GB", "32GB");
         let m3 = new Mobile("Iphone", 98999, "6GB", "256GB");
         let m4 = new Mobile("OnePlus", 32000, "8GB", "128GB");
+        let m5 = new Mobile("IQOO", 30000, "6GB", "128GB");
+        let m6 = new Mobile("Samsung", 92000, "8GB", "256GB");
+        let m7 = new Mobile("Nothing", 28000, "8GB", "128GB");
 
-        let mobile = [m1, m2, m3, m4];
+        let mobile = [m1, m2, m3, m4, m5, m6, m7];
         for (let i of mobile) {
 
 
             if (i.price < 35000) { // Mobiles under 35000 price 
-                for (let j in i) {
-                    document.write(` ${j} : ${i[j]} <br> `);
-                }
+                // for (let j in i) {
+                document.getElementsByClassName("container")[0].innerHTML +=
+                    `<div class="brands"> Brand :${i.brand} <br>
+                        Price :  ${i.price} <br> Ram : ${i.ram} <br> Storage : ${i.storage}
+                        <br> 
+                    <div> `;
+                // }
                 // Print their brand and price 
                 // document.write(`${i.brand} : ${i.price} <br>`);
             }
