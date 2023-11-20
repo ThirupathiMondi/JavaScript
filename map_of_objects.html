@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let map = new Map();
+        let s = { name: "Thirupathi", id: 43, education: "MCA" };
+        let t = { name: "Vamshi", id: 42, education: "MCA" };
+        let u = { name: "Kumar", id: 44, education: "BE" };
+        map.set(1, s);
+        map.set(2, t);
+        map.set(3, u);
+        for (let i of map.values()) {
+
+            if (i.name !== "Vamshi") {
+
+                for (let j in i) {
+                    document.write(`${j} : ${i[j]} <br>`);
+                }
+            }
+        }
+        document.write(JSON.stringify(map.get(1)));
+        document.write("<br>" + map.has(3));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let map = new Map();
+        map.set(1, "Thiru");
+        map.set(2, "pathi");
+        for (let i of map.values())
+            document.write(`${i} <br>`);
+        for (let i of map.keys())
+            document.write(`${i} <br>`);
+        for (let i of map)
+            document.write(`${i} <br>`);
+
+        map.delete(2);
+
+        for (let i of map)
+            document.write(`<br>${i} `);
+
+        document.write(map.get(1));
+        
+    </script>
+</body>
+
+</html>

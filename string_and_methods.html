@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let s = "This is a string";
+        let t = "      Second String ";
+        document.write(s);
+        document.write("<br> To find the length >>> string.length: " + s.length);
+        document.write("<br> To Upper case  >>> string.toUpperCase() : " + s.toUpperCase());
+        document.write("<br> To Lower case >>> string.toLowerCase() : " + s.toLowerCase());
+        document.write("<br> To concat two strings >>> string1.concat(string2) : " + s.concat(t));
+        document.write("<br> Substring of a string : <br>i) substring()<br>ii) slice()<br>iii) substr()");
+        document.write("<br>string.substring(i,j)  >>> i-start index j- end-1 index : " + s.substring(0, 4));
+        document.write("<br>string.slice(i,j)   >>> same as substring but accepts negative index which starts from -1 and at the end : " + s.slice(-5, -2));
+        document.write("<br>string.substr(i,j)  >>>  i-start index j-no.of chars : " + s.substr(5, 10));
+        document.write("<br> To find Index of a substring >>> string.indexOf(string) : " + s.indexOf("is"));
+        document.write("<br> To find Index of a substring >>> string.lastIndexOf(string) : " + s.lastIndexOf("is"));
+        document.write("<br>String starts with ? >>> string.startswith(string) : " + s.startsWith('This'));
+        document.write("<br>String ends with ? >>> string.endswith(string) : " + s.endsWith('g'));
+        document.write("<br>Replace a part of string ? >>> string.replace(string to be replaced, replacing string) : " + s.replace('This', "That"));
+        document.write("<br>Replace all occurences of a part of string ? >>> string.replaceAll(string to be replaced, replacing string) : " + s.replaceAll('s', "replaced"));
+        document.write("<br> " + t);
+        console.log(t);
+        console.log(t.split(""));
+        document.write("<br> To remove white spaces before and after a string >>> string.trim() : " + t.trim());
+
+        let a = t.split("");
+        document.write("<br> " + a);
+    </script>
+</body>
+
+</html>

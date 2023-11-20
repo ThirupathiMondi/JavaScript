@@ -25,6 +25,7 @@
         border-radius: 5px;
         background-color: rgba(80, 104, 224, 0.699);
         color: white;
+        font-family: Tahoma, Geneva, Verdana, sans-serif;
         box-shadow: 1px 1px 10px black;
         text-align: center;
     }
@@ -61,8 +62,8 @@
             if (i.price < 35000) { // Mobiles under 35000 price 
                 // for (let j in i) {
                 document.getElementsByClassName("container")[0].innerHTML +=
-                    `<div class="brands"> Brand :${i.brand} <br>
-                        Price :  ${i.price} <br> Ram : ${i.ram} <br> Storage : ${i.storage}
+                    `<div class="brands"> <strong>Brand</strong> :${i.brand} <br>
+                        <strong>Price</strong> :  ${i.price} <br> <strong>Ram</strong> : ${i.ram} <br> <strong>Storage</strong> : ${i.storage}
                         <br> 
                     <div> `;
                 // }
