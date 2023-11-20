@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Mobile (brand, price, ram, storage) {
+            this.brand = brand;
+            this.price = price;
+            this.ram = ram;
+            this.storage = storage;
+        }
+
+        let m1 = new Mobile("Realme", 12000, "4GB", "128GB");
+        let m2 = new Mobile("Redmi", 7000, "3GB", "32GB");
+        let m3 = new Mobile("Iphone", 98999, "6GB", "256GB");
+        let m4 = new Mobile("OnePlus", 32000, "8GB", "128GB");
+
+        let mobile = [m1, m2, m3, m4];
+        for (let i of mobile) {
+
+
+            if (i.price < 35000) { // Mobiles under 35000 price 
+                for (let j in i) {
+                    document.write(` ${j} : ${i[j]} <br> `);
+                }
+                // Print their brand and price 
+                // document.write(`${i.brand} : ${i.price} <br>`);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
