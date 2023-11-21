@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+    <style>
+        body {
+            margin: 0px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .heading {
+            width: 100%;
+            text-align: center;
+            font-size: 3rcap;
+        }
+
+        .details {
+            border: 1px solid rgb(75, 75, 237);
+            border-radius: 15px;
+            padding: 15px;
+            width: 220px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 1px 1px 5px rgb(75, 75, 237);
+            background-color: rgb(152, 239, 239);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .details:hover {
+            transform: scale3d(1.02, 1.02, 0.3);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 class="heading">Osmania University</h3>
+    <p style="width: 100%;margin-left: 15dvh; font-weight:800;"> Students List </p>
+    <script>
+        class Student {
+            constructor(id, name, branch, mobile, email) {
+                this.id = id;
+                this.name = name;
+                this.branch = branch;
+                this.mobile = mobile;
+                this.email = email;
+            }
+
+            getDetails () {
+                return `<div class="details"> <div> ID :   ${this.id}  <br> Name :   ${this.name}  <br> Branch :   ${this.branch}  <br> Mobile :  ${this.mobile}  <br> Email:   ${this.email} </div></div>`;
+            }
+        }
+        let s1 = new Student(34, "Thirupathi", "MCA", 938742974, "tirupati@gmail.com");
+        let s2 = new Student(35, "Vamshi", "MCA", 938742975, "vamchi@gmail.com");
+        let s3 = new Student(36, "Kumara Veera Bhadra Sai Sri", "BE", 938742977, "kumari@gmail.com");
+        let s4 = new Student(37, "Prashanth", "BSc", 9387345975, "peaceful@gmail.com");
+        let s5 = new Student(38, "Arun", "BE", 923442974, "achiever@gmail.com");
+        let s6 = new Student(39, "Uday", "BE", 933452975, "useful@gmail.com");
+
+        document.write(s1.getDetails());
+        document.write(s2.getDetails());
+        document.write(s3.getDetails());
+        document.write(s4.getDetails());
+        document.write(s5.getDetails());
+        document.write(s6.getDetails());
+
+    </script>
+</body>
+
+</html>

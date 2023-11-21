@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+
+<body>
+    <script>
+        // We pass a function as argument to another function, the passed function is called callback and the funtion which accepts the function as parameter is called Higher order function.
+        // We can control the flow of execution of functions with callbacks.
+
+        function hello (myfun) {
+            document.write("Hello <br>");
+            myfun();
+        }
+        function hi () {
+            document.write("<br>Hi ");
+        }
+        hello(hi);
+
+        function sayHi (fun1, fun2) {
+            document.write("<br> In sayHi : saying Hi second time");
+            fun1();
+            fun2();
+        }
+        function sayHello () {
+            document.write("<br>In sayHello : Saying Hello");
+        }
+        setTimeout(sayHi, 2000, sayHello, hi)
+    </script>
+</body>
+
+</html>

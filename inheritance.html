@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+
+<body>
+    <script>
+        class Campus {
+            constructor(campus) {
+                this.campus = campus;
+            }
+            getCampus () {
+                return this.campus;
+            }
+        }
+        class Branch extends Campus {
+            constructor(campus, branch) {
+                super(campus);
+                this.branch = branch;
+            }
+            getBranch () {
+                return this.getCampus() + "<br>" + this.branch;
+            }
+        }
+        class Student extends Branch {
+            constructor(campus, branch, name, id, gender) {
+                super(campus, branch);
+                this.name = name;
+                this.id = id;
+                this.gender = gender;
+            }
+            getStudentDetails () {
+                return this.getBranch() + "<br>" + this.name + "<br>" + this.id + "<br>" + this.gender;
+            }
+        }
+        let s = new Student("OU", "MCA", "Thirupathi", 123, "Male");
+        document.write(s.getStudentDetails());
+    </script>
+</body>
+
+</html>

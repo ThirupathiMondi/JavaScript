@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+
+<body>
+    <script>
+        let age = parseInt(prompt("Enter your age"));
+
+        // let ageCheck = new Promise((resolve, reject) => {
+        //     if (age < 18)
+        //         resolve("You are Eligible to vote");
+        //     reject("You are not Eligible to vote");
+        // });
+        // ageCheck.then((info) => document.write(info));
+        // ageCheck.catch((info) => document.write(info));
+        // ageCheck.finally(() => document.write("<br>Thank you"));
+
+        // Handy way
+        new Promise((resolve, reject) => {
+            if (age < 18)
+                resolve("You are not Eligible to vote");
+            else
+                reject("You are Eligible to vote");
+        }).then((info) => document.write(info))
+            .catch((info) => document.write(info))
+            .finally(() => document.write("<br>Thank you"));
+
+    </script>
+</body>
+
+</html>
