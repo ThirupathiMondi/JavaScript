@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async await</title>
+</head>
+
+<body>
+    <script>
+        // async function fun () {
+        //     return new Promise((res, rej) => {
+        //         res("Promise executed");
+        //     });
+        // }
+        // fun().then((msg) => document.write(msg));
+
+
+        // async function fun2 () {
+        //     return Promise.resolve("Solved");
+        // }
+
+        // fun2().then((msg) => document.write(msg));
+
+        let promise = new Promise((res, rej) => {
+            setTimeout(() => {
+                res("Executing in 3 seconds ");
+            }, 3000);
+        });
+
+        async function waiting () {
+            let p = await promise;
+            document.write(p);
+            document.write("<br> In waiting function, waiting for the promise to get executed");
+        }
+        waiting();
+
+    </script>
+</body>
+
+</html>

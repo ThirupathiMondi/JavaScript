@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Teller</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            color: green;
+        }
+
+        button {
+            background-color: black;
+            color: green;
+            border: 1px solid green;
+            border-radius: 5px;
+        }
+
+        div {
+            width: 100%;
+        }
+
+        #joke {
+            position: absolute;
+            top: 25%;
+            left: 10%;
+            border: 1px solid green;
+            border-radius: 20px;
+            width: 80%;
+            padding: 20px;
+            /* height: 15%; */
+        }
+
+        #btn {
+            position: absolute;
+            top: 45%;
+            left: 48%;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p id="joke">You know that handle bars song? that singer rode his bike with no handle bars well Chuck Norris
+            rode his handle bars with no bike.</p>
+    </div>
+    <div>
+        <button id="btn" onclick="jokes()">New Joke</button>
+    </div>
+    <script>
+        function jokes () {
+            fetch('https://api.chucknorris.io/jokes/random').then(res => res.json()).then(res => document.getElementById('joke').innerHTML = res.value);
+        }
+    </script>
+</body>
+
+</html>
