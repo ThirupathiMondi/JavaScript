@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Data Into Table </title>
+    <style>
+        #tab {
+            border-collapse: collapse;
+            text-align: justify;
+        }
+
+        td {
+            border: 1px solid gray;
+            width: 200px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Taking an empty table to store the data from API -->
+    <table id="tab">
+        <tr>
+            <td style="font-weight: bold;">Key</td>
+            <td style="font-weight: bold;">Value</td>
+        </tr>
+    </table>
+    <script>
+        // Fetching data from the api 
+        var fetch_obj = [];
+        async function myfun () {
+
+            // Fetch method is used with await keyword within the async function because we want to store the data in the fetch_obj array. To make the remaining code wait so that the array will have some data while we executing the fetch api.
+            // If we dont use await, the code after the fetch will execute directly irrespective of fetch method which will let us to an empty array.
+            // We wont be having any data in the array to access
+            // With await the code after the fetch will wait till the completion of fetch method which gives us some data into array
+            await fetch('https://jsonplaceholder.typicode.com/users')
+                .then(res => res.json())
+                .then(res => {
+                    for (let i of res) {
+                        // Pushing each object into fetch_obj array
+                        fetch_obj.push(i);
+                    }
+                });
+
+            // After the completion of fetch api, we are calling data function and in the data function we are printing the data from the fetch_obj array
+
+            data();
+        }
+
+        function data () {
+            for (let i of fetch_obj) {
+                for (let a in i) {
+                    document.getElementById('tab').innerHTML += `<tr> <td> ${a} </td> <td> ${i[a]}</td></tr>`;
+                    //Adding tr for every key(td) value(td) pair
+                }
+            }
+        }
+
+        myfun();
+    </script>
+</body>
+
+</html>

@@ -9,18 +9,14 @@
 
 <body>
     <script>
-        let fetch_obj;
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(res => res.json())
-            .then(res => {
-                for (let i of res) {
-
-                    for (let a in i) {
-                        document.write(a, i[a] + "<br>");
-                    }
+        // Fetching data from API and printing the whole within the api
+        fetch('https://jsonplaceholder.typicode.com/users').then((res) => res.json()).then(res => {
+            for (let i of res) {
+                for (let j in i) {
+                    document.write(`${j} : ${i[j]} <br>`);
                 }
-            });
-
+            }
+        })
     </script>
 </body>
 
