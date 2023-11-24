@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Deposit Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            margin-top: 150px;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            border: 1px solid lightgray;
+            box-shadow: 2px 2px 5px blue, -2px -2px 5px red;
+            border-radius: 20px;
+            align-items: center;
+            background: linear-gradient(to bottom right, white, yellow, orange);
+        }
+
+        input {
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            box-shadow: 1px 1px 5px blue;
+            padding: 5px;
+            width: 200px;
+        }
+
+        input:focus,
+        input:hover {
+            box-shadow: 2px 2px 5px red, -2px -2px 5px blue;
+        }
+
+        td {
+            padding-bottom: 30px;
+            padding-right: 10px;
+        }
+
+        button {
+            background-color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 8px;
+        }
+
+        #cancel:hover {
+            box-shadow: 2px 2px 5px red, -2px -2px 5px red;
+        }
+
+        #calculate:hover {
+            box-shadow: 2px 2px 5px green, -2px -2px 5px green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h3>Fixed Deposit Calculator</h3> -->
+    <section class="container">
+        <form action="">
+            <table>
+                <tr>
+                    <td> <label>Full Name </label> </td>
+                    <td><input type="text"> </td>
+                </tr>
+                <tr>
+                    <td> <label>Account Number </label> </td>
+                    <td><input type="number"> </td>
+                </tr>
+                <tr>
+                    <td> <label>Amount </label> </td>
+                    <td><input type="number" id="amount"> </td>
+                </tr>
+                <tr>
+                    <td> <label>Tenure </label> </td>
+                    <td><input type="number" id="tenure"> </td>
+                </tr>
+                <tr>
+                    <td> <label>Age</label> </td>
+                    <td><input type="number" id="age"> </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label id="res">&nbsp;</label> </td>
+                </tr>
+                <tr>
+                    <td> <button type="reset" id="cancel" onclick="clear_fun()">Cancel</button> </td>
+                    <td> <button type="button" id="calculate" onclick="calculate()">Calculate</button> </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+    <script>
+        function calculate () {
+            let amounts = parseInt(document.getElementById('amount').value);
+            let tenures = parseInt(document.getElementById('tenure').value);
+            let ages = parseInt(document.getElementById('age').value);
+
+            let mat_amount = (ages <= 60) ? calculate_by_age(amounts, tenures, ages, 6) : calculate_by_age(amounts, tenures, ages, 7.5);
+            document.getElementById('res').innerHTML = `Your maturity amount : ${mat_amount}`;
+        }
+
+        function clear_fun () {
+            document.getElementById('res').innerHTML = "&nbsp;";
+        }
+        function calculate_by_age (amount, tenure, age, roi) {
+            console.log(amount);
+            console.log(age);
+            console.log(tenure);
+            console.log(roi);
+            let mat_amount = parseInt(amount + parseInt((amount * tenure * roi) / 100));
+            console.log(mat_amount);
+            mat_amount = mat_amount - parseInt((3 * mat_amount) / 100);
+            console.log(mat_amount);
+            return mat_amount;
+        }
+    </script>
+</body>
+
+</html>

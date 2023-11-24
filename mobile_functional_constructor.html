@@ -62,11 +62,16 @@
             if (i.price < 35000) { // Mobiles under 35000 price 
                 // for (let j in i) {
 
-                document.getElementsByClassName("container")[0].innerHTML +=
-                    `<div class="brands"> <strong>Brand</strong> :${i.brand} <br>
-                        <strong>Price</strong> :  ${i.price} <br> <strong>Ram</strong> : ${i.ram} <br> <strong>Storage</strong> : ${i.storage}
-                        <br> 
-                    <div> `;
+                let data = '';
+                // Iterating through all the key value pairs and storing them in data variable, later adding this data into a div;
+                for (let j in i) {
+                    data += `${j.toUpperCase()} : ${i[j]} <br>`;
+                }
+                document.getElementsByClassName("container")[0].innerHTML += `<div class="brands"> ${data}</div>`;
+                // `<div class="brands"> <strong>Brand</strong> :${i.brand} <br>
+                //     <strong>Price</strong> :  ${i.price} <br> <strong>Ram</strong> : ${i.ram} <br> <strong>Storage</strong> : ${i.storage}
+                //     <br> 
+                // <div> `;
                 // }
                 // Print their brand and price 
                 // document.write(`${i.brand} : ${i.price} <br>`);
