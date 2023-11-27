@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter out Non Unique Values</title>
+</head>
+
+<body>
+    <script>
+        var arr = [1, 22, 2, 23, 4, 5, 6, 7, 8, 6, 4, 3, 2, 2];
+        var count = {};
+        for (let i of arr) {
+            if (count[i])
+                count[i]++;
+            else
+                count[i] = 1;
+        }
+        arr = [];
+        for (let i in count) {
+            if (count[i] == 1)
+                arr.push(i);
+        }
+        document.write(JSON.stringify(count));
+        document.write("<br>" + arr);
+    </script>
+</body>
+
+</html>

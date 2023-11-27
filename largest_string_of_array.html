@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest string in array</title>
+</head>
+
+<body>
+    <script>
+
+        var arr = ['aaaaaaa', 'b', 'bcd', 'efg', 'hijkl', 'zxywvu', 'a'];
+        var large = '';
+        for (let i of arr) {
+            if (i.length > large.length)
+                large = i;
+        }
+        document.write(large);
+    </script>
+</body>
+
+</html>

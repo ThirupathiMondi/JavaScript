@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            border-radius: 20px;
+            width: 100px;
+            height: 310px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .shape {
+            border: 1px solid black;
+            margin: 10px;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="green shape"></div>
+        <div class="yellow shape"></div>
+        <div class="red shape"></div>
+    </div>
+    <script>
+        function color_changer () {
+            document.getElementsByClassName('green')[0].style.backgroundColor = 'green';
+            setTimeout(() => {
+                document.getElementsByClassName('green')[0].style.backgroundColor = 'white';
+                document.getElementsByClassName('yellow')[0].style.backgroundColor = 'yellow';
+            }, 2000);
+            setTimeout(() => {
+                document.getElementsByClassName('yellow')[0].style.backgroundColor = 'white';
+                document.getElementsByClassName('red')[0].style.backgroundColor = 'red';
+            }, 4000);
+            document.getElementsByClassName('red')[0].style.backgroundColor = 'white';
+
+        }
+        color_changer();
+        setInterval(color_changer, 6000);
+    </script>
+</body>
+
+</html>
